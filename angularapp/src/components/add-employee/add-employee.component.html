@@ -1,0 +1,45 @@
+<div class="toast-container top-right"></div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-6">
+      <h1>Add New Employee</h1>
+      <form [formGroup]="addForm" (ngSubmit)="saveEmployee()">
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input required matInput type="text" formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Position</mat-label>
+            <input matInput type="text" formControlName="position" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Hiring Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="hiringDate" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Salary</mat-label>
+            <input required matInput type="number" formControlName="salary"
+              onkeypress="return (event.charCode != 46)" />
+          </mat-form-field>
+        </div>
+        <div class="group-btn">
+          <button (click)="back()" class="btn btn-dark">Back</button>
+          <button type="submit" class="btn btn-success" [disabled]="!addForm.valid">Save</button>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
+@import '../node_modules/ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'ngx-toastr/toastr';
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$primary: #673ab7;
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+nav {
+    background-color: $primary;
+}
+
+.action-row {
+    margin-top: -10px
+}
+
+.ag-theme-alpine {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+.ag-body-horizontal-scroll{
+    display: none;
+}
+
+nav h2 {
+    width: 100%;
+    padding-left: 20px;
+    color: $primary;
+}
+
+app-employee-edit {
+    margin: 0 auto;
+}
+
+.btn-primary {
+    float: right;
+    margin-right: 20px;
+}
+.btn-add {
+    display: inline-block;
+}
+
+mat-form-field {
+    width: 100%;
+}
+.group-btn {
+    float: right
+}
+.btn-dark {
+    margin-right:20px;
+}
+.btn-add {
+    margin-left: 10%
+}

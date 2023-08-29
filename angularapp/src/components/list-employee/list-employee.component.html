@@ -1,0 +1,5 @@
+<div class="btn-add">
+  <button (click)="onAddNewEmployee()" class="btn btn-primary">Add New Employee</button>
+</div>
+<ag-grid-angular class="ag-theme-alpine" [rowData]="employees" [columnDefs]="columnDefs" [defaultColDef]="defaultColDef"
+  [animateRows]="true" [pagination]="true" [paginationPageSize]="8"></ag-grid-angular>
